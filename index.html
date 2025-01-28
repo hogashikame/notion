@@ -6,21 +6,14 @@
     <title>Mini Calendar</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #fff;
-        }
-        .wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            min-height: 100%;
         }
         #calendari {
             margin: 0 auto;
-            height: 130px; /* Reducido */
-            width: 250px;  /* Reducido */
-            font-size: 12px; /* Más pequeño */
+            height: 90px; /* Reducido */
+            width: 180px;  /* Reducido */
+            font-size: 9px; /* Reducido */
         }
         table {
             border-collapse: collapse;
@@ -31,8 +24,8 @@
         td, th {
             text-align: center;
             background-color: #fff;
-            font-size: 12px; /* Reducido */
-            padding: 5px;
+            font-size: 9px; /* Más pequeño */
+            padding: 3px; /* Menos espacio */
         }
         th {
             background-color: #9b59b6;
@@ -41,7 +34,7 @@
         }
         td>span {
             display: block;
-            padding: 6px;
+            padding: 4px; /* Reducido */
             border: 1px solid transparent;
             transition: border 0.3s ease;
         }
@@ -53,21 +46,19 @@
         .boto-next, .boto-prev {
             background: rgba(0,0,0,0.1);
             color: #fff;
-            font-size: 14px;
+            font-size: 9px;
             font-weight: bold;
-            height: 22px;
-            width: 22px;
+            height: 18px; /* Más pequeño */
+            width: 18px;
             position: absolute;
-            top: 8px;
+            top: 5px;
         }
         .boto-next { right: 5px; }
         .boto-prev { left: 5px; }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div id="calendari"></div>
-    </div>
+    <div id="calendari"></div>
     <script>
         var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         var dias_abr = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
